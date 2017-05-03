@@ -20,46 +20,36 @@ function translate(number, withoutSuffix, key, isFuture) {
         case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'minúty' : 'minút');
-            } else {
-                return result + 'minútami';
             }
-            break;
+            return result + 'minútami';
         case 'h':  // an hour / in an hour / an hour ago
             return withoutSuffix ? 'hodina' : (isFuture ? 'hodinu' : 'hodinou');
         case 'hh': // 9 hours / in 9 hours / 9 hours ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'hodiny' : 'hodín');
-            } else {
-                return result + 'hodinami';
             }
-            break;
+            return result + 'hodinami';
         case 'd':  // a day / in a day / a day ago
             return (withoutSuffix || isFuture) ? 'deň' : 'dňom';
         case 'dd': // 9 days / in 9 days / 9 days ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'dni' : 'dní');
-            } else {
-                return result + 'dňami';
             }
-            break;
+            return result + 'dňami';
         case 'M':  // a month / in a month / a month ago
             return (withoutSuffix || isFuture) ? 'mesiac' : 'mesiacom';
         case 'MM': // 9 months / in 9 months / 9 months ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'mesiace' : 'mesiacov');
-            } else {
-                return result + 'mesiacmi';
             }
-            break;
+            return result + 'mesiacmi';
         case 'y':  // a year / in a year / a year ago
             return (withoutSuffix || isFuture) ? 'rok' : 'rokom';
         case 'yy': // 9 years / in 9 years / 9 years ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'roky' : 'rokov');
-            } else {
-                return result + 'rokmi';
             }
-            break;
+            return result + 'rokmi';
     }
 }
 

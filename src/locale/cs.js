@@ -19,46 +19,36 @@ function translate(number, withoutSuffix, key, isFuture) {
         case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'minuty' : 'minut');
-            } else {
-                return result + 'minutami';
             }
-            break;
+            return result + 'minutami';
         case 'h':  // an hour / in an hour / an hour ago
             return withoutSuffix ? 'hodina' : (isFuture ? 'hodinu' : 'hodinou');
         case 'hh': // 9 hours / in 9 hours / 9 hours ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'hodiny' : 'hodin');
-            } else {
-                return result + 'hodinami';
             }
-            break;
+            return result + 'hodinami';
         case 'd':  // a day / in a day / a day ago
             return (withoutSuffix || isFuture) ? 'den' : 'dnem';
         case 'dd': // 9 days / in 9 days / 9 days ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'dny' : 'dní');
-            } else {
-                return result + 'dny';
             }
-            break;
+            return result + 'dny';
         case 'M':  // a month / in a month / a month ago
             return (withoutSuffix || isFuture) ? 'měsíc' : 'měsícem';
         case 'MM': // 9 months / in 9 months / 9 months ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'měsíce' : 'měsíců');
-            } else {
-                return result + 'měsíci';
             }
-            break;
+            return result + 'měsíci';
         case 'y':  // a year / in a year / a year ago
             return (withoutSuffix || isFuture) ? 'rok' : 'rokem';
         case 'yy': // 9 years / in 9 years / 9 years ago
             if (withoutSuffix || isFuture) {
                 return result + (plural(number) ? 'roky' : 'let');
-            } else {
-                return result + 'lety';
             }
-            break;
+            return result + 'lety';
     }
 }
 
